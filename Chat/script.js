@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const messageInput = document.getElementById("message-input");
     const sendButton = document.getElementById("send-button");
     const chatMessages = document.querySelector(".chat-messages");
@@ -12,6 +12,7 @@
             const messageElement = document.createElement("div");
             messageElement.classList.add("message");
             messageElement.textContent = messageText;
+            messageElement.style.color = getSpeakerColor(selectedSpeaker); // テキストの色を設定
             chatMessages.appendChild(messageElement);
             messageInput.value = "";
             chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -29,4 +30,18 @@
             sendButton.click();
         }
     });
+
+    // スピーカーの色を取得する関数
+    function getSpeakerColor(speaker) {
+        switch (speaker) {
+            case "りんごさん":
+                return "red";
+            case "みかんさん":
+                return "orange";
+            case "ばななさん":
+                return "yellow";
+            default:
+                return "black"; // デフォルトは黒色
+        }
+    }
 });
