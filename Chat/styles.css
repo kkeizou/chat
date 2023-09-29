@@ -1,0 +1,85 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.chat-messages {
+    max-height: 300px;
+    overflow-y: scroll;
+    /*border: 1px solid #ccc;
+    border-radius: 5px;*/
+    padding: 10px;
+   /* color: #333; /*テキストを黒にする*/
+    background: #fff;
+    border: 2px solid #13178E;
+    border-radius: 10px 10px 10px 0px; /*左下だけ尖らせて吹き出し感を出す*/
+    margin-right: 50px; /*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
+
+
+}
+
+
+.chat-input {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#message-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.message[data-speaker="りんごさん"] {
+    background-color: red;
+    color: white; /* テキストの色も変更（白色に） */
+}
+
+/* みかんさんのメッセージの背景色 */
+.message[data-speaker="みかんさん"] {
+    background-color: orange;
+    color: white; /* テキストの色も変更（白色に） */
+}
+
+/* ばななさんのメッセージの背景色 */
+.message[data-speaker="ばななさん"] {
+    background-color: yellow;
+    color: black; /* テキストの色も変更（黒色に） */
+}
+
+
+
+
+.speaker[data-speaker="りんごさん"] {
+    color: red;
+}
+
+.speaker[data-speaker="みかんさん"] {
+    color: orange;
+}
+
+.speaker[data-speaker="ばななさん"] {
+    color: yellow;
+}
