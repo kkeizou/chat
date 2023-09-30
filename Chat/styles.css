@@ -1,46 +1,46 @@
-﻿body {
+/* ページ全体のスタイル */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* チャットコンテナのスタイル */
 .chat-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #000;
     border-radius: 5px;
+    background-color: #974; /*背景色*/
 }
 
-.chat-messages {
-    max-height: 300px;
-    overflow-y: scroll;
-    /*border: 1px solid #ccc;
-    border-radius: 5px;*/
-    padding: 10px;
-   /* color: #333; /*テキストを黒にする*/
-    background: #fff;
-    border: 2px solid #13178E;
-    border-radius: 10px 10px 10px 0px; /*左下だけ尖らせて吹き出し感を出す*/
-    margin-right: 50px; /*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
-
-
-}
-
-
-.chat-input {
-    margin-top: 10px;
+/* チャットメッセージのスタイル */
+/* チャットメッセージのスタイル */
+.chat-message {
     display: flex;
-    align-items: center;
+    margin-bottom: 10px;
 }
 
-#message-input {
+/* 吹き出しのスタイル */
+/*.balloon {
+    border-radius: 10px;
+    padding: 5px 10px;
+    max-width: 70%; /* 吹き出しの最大幅を設定 */
+/*}*/
+
+/* メッセージのスタイル */
+.message {
     flex: 1;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 8px;
+    border: 2px solid #000; /*吹き出しの輪郭*/
+    border-radius: 15px;
+    margin-left: 15px; /* メッセージと吹き出しの間隔 */
+    background-color: white;
+    margin-bottom: 5px;
 }
 
+/* 送信ボタンのスタイル */
 #send-button {
     margin-left: 10px;
     padding: 5px 10px;
@@ -51,35 +51,4 @@
     cursor: pointer;
 }
 
-
-.message[data-speaker="りんごさん"] {
-    background-color: red;
-    color: white; /* テキストの色も変更（白色に） */
-}
-
-/* みかんさんのメッセージの背景色 */
-.message[data-speaker="みかんさん"] {
-    background-color: orange;
-    color: white; /* テキストの色も変更（白色に） */
-}
-
-/* ばななさんのメッセージの背景色 */
-.message[data-speaker="ばななさん"] {
-    background-color: yellow;
-    color: black; /* テキストの色も変更（黒色に） */
-}
-
-
-
-
-.speaker[data-speaker="りんごさん"] {
-    color: red;
-}
-
-.speaker[data-speaker="みかんさん"] {
-    color: orange;
-}
-
-.speaker[data-speaker="ばななさん"] {
-    color: yellow;
-}
+/* 各発言者に対するメッセージとスピーカー情報のスタイルはscript.js内で動的に設定 */
